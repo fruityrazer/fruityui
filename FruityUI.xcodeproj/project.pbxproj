@@ -39,6 +39,11 @@
 		A0BAE55E2479EEF700B82FBE /* Synapse2HandleMode+Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BAE55D2479EEF700B82FBE /* Synapse2HandleMode+Conversions.swift */; };
 		A0BAE5602479F83300B82FBE /* Synapse2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BAE55F2479F83300B82FBE /* Synapse2Controller.swift */; };
 		A0BAE5622479F83E00B82FBE /* DeviceControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BAE5612479F83E00B82FBE /* DeviceControlling.swift */; };
+		A0C8383D24955E4C009A4912 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8383C24955E4C009A4912 /* Sparkle.framework */; };
+		A0C8383E24955E50009A4912 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8383C24955E4C009A4912 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0C8384324955EA4009A4912 /* org.sparkle-project.InstallerStatus.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0C8384024955EA4009A4912 /* org.sparkle-project.InstallerStatus.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0C8384424955EA4009A4912 /* org.sparkle-project.InstallerConnection.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0C8384124955EA4009A4912 /* org.sparkle-project.InstallerConnection.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0C8384524955EA4009A4912 /* org.sparkle-project.InstallerLauncher.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0C8384224955EA4009A4912 /* org.sparkle-project.InstallerLauncher.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A0CD978824789A1200BA56B0 /* DeviceConfigurationV2+SynapseMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD978724789A1200BA56B0 /* DeviceConfigurationV2+SynapseMode.swift */; };
 		A0CD978A24789BFA00BA56B0 /* DeviceConfigurationV2+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD978924789BFA00BA56B0 /* DeviceConfigurationV2+CoreData.swift */; };
 		A0CD978C24789F3B00BA56B0 /* DeviceConfigurationViewV2+Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD978B24789F3B00BA56B0 /* DeviceConfigurationViewV2+Presenter.swift */; };
@@ -87,6 +92,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A0E4BF492450C90700F0D77D /* FruityKit.framework in Embed Frameworks */,
+				A0C8383E24955E50009A4912 /* Sparkle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +104,18 @@
 			dstSubfolderSpec = 1;
 			files = (
 				A0A91F4E248EDEDE000EFC9A /* FruityUILaunchHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0C8383F24955E98009A4912 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				A0C8384324955EA4009A4912 /* org.sparkle-project.InstallerStatus.xpc in CopyFiles */,
+				A0C8384424955EA4009A4912 /* org.sparkle-project.InstallerConnection.xpc in CopyFiles */,
+				A0C8384524955EA4009A4912 /* org.sparkle-project.InstallerLauncher.xpc in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +158,10 @@
 		A0BAE55D2479EEF700B82FBE /* Synapse2HandleMode+Conversions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Synapse2HandleMode+Conversions.swift"; sourceTree = "<group>"; };
 		A0BAE55F2479F83300B82FBE /* Synapse2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synapse2Controller.swift; sourceTree = "<group>"; };
 		A0BAE5612479F83E00B82FBE /* DeviceControlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlling.swift; sourceTree = "<group>"; };
+		A0C8383C24955E4C009A4912 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		A0C8384024955EA4009A4912 /* org.sparkle-project.InstallerStatus.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; path = "org.sparkle-project.InstallerStatus.xpc"; sourceTree = "<group>"; };
+		A0C8384124955EA4009A4912 /* org.sparkle-project.InstallerConnection.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; path = "org.sparkle-project.InstallerConnection.xpc"; sourceTree = "<group>"; };
+		A0C8384224955EA4009A4912 /* org.sparkle-project.InstallerLauncher.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; path = "org.sparkle-project.InstallerLauncher.xpc"; sourceTree = "<group>"; };
 		A0CD978724789A1200BA56B0 /* DeviceConfigurationV2+SynapseMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceConfigurationV2+SynapseMode.swift"; sourceTree = "<group>"; };
 		A0CD978924789BFA00BA56B0 /* DeviceConfigurationV2+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceConfigurationV2+CoreData.swift"; sourceTree = "<group>"; };
 		A0CD978B24789F3B00BA56B0 /* DeviceConfigurationViewV2+Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceConfigurationViewV2+Presenter.swift"; sourceTree = "<group>"; };
@@ -191,6 +213,7 @@
 			files = (
 				A0692F10248D913E00296F7A /* CloudKit.framework in Frameworks */,
 				A0E4BF482450C90700F0D77D /* FruityKit.framework in Frameworks */,
+				A0C8383D24955E4C009A4912 /* Sparkle.framework in Frameworks */,
 				A0B1FDC9248EC1A600E07C79 /* ServiceManagement.framework in Frameworks */,
 				A0FBA0F42466B8340002EB75 /* ColorPicker in Frameworks */,
 			);
@@ -205,6 +228,7 @@
 				A0692F0F248D913E00296F7A /* CloudKit.framework */,
 				A00F7EA9244F80F70035CB81 /* FruityKit.framework */,
 				A0B1FDC8248EC1A600E07C79 /* ServiceManagement.framework */,
+				A0C8383C24955E4C009A4912 /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,8 +288,9 @@
 				A0AC449F244CAF78003CEDB4 /* FruityUI */,
 				A0A91F41248EDE9A000EFC9A /* FruityUILaunchHelper */,
 				A0B1FDCA248EC21200E07C79 /* Shared */,
-				A0AC449E244CAF78003CEDB4 /* Products */,
 				A00F7E9D244F7AE10035CB81 /* Frameworks */,
+				A0C8384624955EAA009A4912 /* XPCServices */,
+				A0AC449E244CAF78003CEDB4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -339,6 +364,16 @@
 				A0DFECE9248C53C3000C01BC /* DeviceConfigurationV3+CoreData.swift */,
 			);
 			path = "Synapse 3 Mode";
+			sourceTree = "<group>";
+		};
+		A0C8384624955EAA009A4912 /* XPCServices */ = {
+			isa = PBXGroup;
+			children = (
+				A0C8384124955EA4009A4912 /* org.sparkle-project.InstallerConnection.xpc */,
+				A0C8384224955EA4009A4912 /* org.sparkle-project.InstallerLauncher.xpc */,
+				A0C8384024955EA4009A4912 /* org.sparkle-project.InstallerStatus.xpc */,
+			);
+			path = XPCServices;
 			sourceTree = "<group>";
 		};
 		A0CD978624789A0600BA56B0 /* Conversions */ = {
@@ -487,8 +522,10 @@
 				A0AC4499244CAF78003CEDB4 /* Sources */,
 				A0AC449A244CAF78003CEDB4 /* Frameworks */,
 				A0AC449B244CAF78003CEDB4 /* Resources */,
+				A0C8384724955F14009A4912 /* ShellScript */,
 				A00F7EA6244F7B990035CB81 /* Embed Frameworks */,
 				A0B1FDC6248EC17C00E07C79 /* CopyFiles */,
+				A0C8383F24955E98009A4912 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -564,6 +601,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0C8384724955F14009A4912 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n./bin/sparkle/codesign_embedded_executable \"$CODE_SIGN_IDENTITY\" XPCServices/*.xpc\n./bin/sparkle/codesign_embedded_executable \"$CODE_SIGN_IDENTITY\" Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate\n./bin/sparkle/codesign_embedded_executable \"$CODE_SIGN_IDENTITY\" Frameworks/Sparkle.framework/Versions/A/Resources/Updater.app/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A0A91F3C248EDE9A000EFC9A /* Sources */ = {
@@ -832,6 +889,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = FruityUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -863,6 +921,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = FruityUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

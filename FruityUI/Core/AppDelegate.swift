@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Sparkle
 import SwiftUI
 
 @NSApplicationMain
@@ -46,6 +47,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         killLaunchHelperIfRunning()
         
+        let sparkle = SPUUpdater(hostBundle: Bundle.mainApp,
+                                 applicationBundle: Bundle.mainApp,
+                                 userDriver: SPUStandardUserDriver(hostBundle: Bundle.mainApp,
+                                                                   delegate: nil),
+                                 delegate: nil)
+        
+        try! sparkle.start()
+        sparkle.checkForUpdates()
+        
         engine = Engine()
         router = Router(engine: engine)
         
@@ -68,5 +78,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+    }
+}
+
+private extension Bundle {
+    
+    static var mainApp: Bundle {
+        return Bundle(identifier: BundleIdentifier.mainApp.rawValue)!
     }
 }

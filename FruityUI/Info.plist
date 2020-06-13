@@ -36,5 +36,7 @@
 	<false/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+	<key>SUFeedURL</key>
+	<string>https://locker.edr.io/SampleAppcast.xml</string>
 </dict>
 </plist>
